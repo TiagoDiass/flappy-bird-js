@@ -179,8 +179,43 @@ function FlappyBird(){
 
             if(colidiu(passaro, barreiras)){
                 clearInterval(temporizador)
+                popUpGameOver(pontos)
             }
         }, 20)
+    }
+}
+
+let game = document.querySelector('[wm-flappy]')
+
+function popUpGameOver(pontuacao){
+    
+    if(pontuacao === 0){
+        game.insertAdjacentHTML('afterend', 
+        `<div class="gameOver">
+            <h1>
+                Que pena, você não conseguiu passar por nenhuma barreira, tente novamente!    
+            </h1>
+            <div class="jogarNovamente">
+                <h1><a href="index.html">Jogar novamente</a></h1>
+            </div>
+        </div>`)
+    }
+    else if(pontuacao <= 5){
+        game.insertAdjacentHTML('afterend', 
+        `<div class="gameOver">
+            <h1>Que pena, você morreu, mas conseguiu passar por ${pontuacao} barreiras!</h1>
+            <div class="jogarNovamente">
+                <h1><a href="index.html">Jogar novamente</a></h1>
+            </div>
+        </div>`)
+    }else if(pontuacao > 5 ){
+        game.insertAdjacentHTML('afterend', 
+        `<div class="gameOver">
+            <h1>Boa, você conseguiu passar por ${pontuacao} barreiras</h1>
+            <div class="jogarNovamente">
+                <h1><a href="index.html">Jogar novamente</a></h1>
+            </div>
+        </div>`)
     }
 }
 
