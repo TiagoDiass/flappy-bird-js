@@ -18,6 +18,38 @@ body {
     height: 100%;
 }
 
+#topo{
+    width: 500px;
+    text-align: center;
+    height: 75px;
+}
+
+#topo h1{
+    display: inline-block;
+}
+
+#repo{
+    float: right;
+}
+
+#repo a{
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: -300px;
+    margin-top: -20px;
+    border: 2px solid white;
+    padding: 8px;
+    background-color: rgb(1, 99, 190);
+    /*background-color: #00cf5a;*/
+    transition: background-color 0.2s;
+}
+
+#repo a:hover{
+    background-color: rgb(0, 80, 155);
+    /*background-color: #00bb51;*/
+}
+
 .conteudo {
     display: flex;
     flex-direction: column;
