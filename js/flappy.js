@@ -19,12 +19,6 @@ function Barreira(reversa = false){
     this.SetAltura = altura => corpo.style.height = `${altura}px`
 }
 
-//TESTE, APAGA DPS
-/*const b = new Barreira(true)
-
-b.SetAltura(200)
-document.querySelector('[wm-flappy]').appendChild(b.elemento)*/
-
 function ParDeBarreiras(altura, abertura, PosicaoX){
     this.elemento = novoElemento('div', 'par-de-barreiras')
     
@@ -48,10 +42,6 @@ function ParDeBarreiras(altura, abertura, PosicaoX){
     this.sortearAbertura()
     this.setX(PosicaoX)
 }
-
-//Teste, apaga depois
-//const b = new ParDeBarreiras(700, 240, 400)
-//document.querySelector('[wm-flappy]').appendChild(b.elemento)
 
 function Barreiras(altura, largura, abertura, espaco, notificarPonto){
     //Pares de barreiras
@@ -117,19 +107,6 @@ function Progresso() {
     }
     this.atualizarPontos(0)
 }
-
-//TESTE
-/*const barreiras = new Barreiras(700, 1200, 200, 400)
-const passaro = new Passaro(700)
-const areaDoJogo = document.querySelector('[wm-flappy]')
-
-areaDoJogo.appendChild(passaro.elemento)
-areaDoJogo.appendChild(new Progresso().elemento)
-barreiras.pares.forEach(par => areaDoJogo.appendChild(par.elemento))
-setInterval(() => {
-    barreiras.animar()
-    passaro.animar()
-},20)*/
 
 function estaoSobrepostos(elementoA, elementoB){
     const a = elementoA.getBoundingClientRect()
