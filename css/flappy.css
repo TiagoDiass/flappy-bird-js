@@ -76,6 +76,7 @@
     color: gold;
     text-decoration: underline;
     cursor: pointer;
+    transition: color 0.2s;
 }
 
 .gameOver .jogarNovamente a:hover{
